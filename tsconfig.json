@@ -1,0 +1,30 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "declaration": false,
+        "removeComments": true,
+        "noLib": false,
+        "resolveJsonModule": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "allowSyntheticDefaultImports": true,
+        "target": "es2017",
+        "sourceMap": true,
+        "outDir": "./dist",
+        "allowJs": true,
+        "baseUrl": "./src",
+        "lib": ["es2019", "ES6"],
+        "incremental": true,
+        "skipLibCheck": true,
+        "strictNullChecks": false,
+        "noImplicitAny": false,
+        "strictBindCallApply": false,
+        "forceConsistentCasingInFileNames": false,
+        "noFallthroughCasesInSwitch": false
+    },
+    // "watchOptions": {
+    //     "watchFile": "fixedPollingInterval"
+    // },
+    "include": ["src/**/*"],
+    "exclude": ["node_modules", "**/*.spec.ts"]
+}

@@ -1,0 +1,30 @@
+*.lock
+
+# dependencies
+/node_modules
+/src/schema.gql
+
+#local env file
+#.env
+.env
+
+# IDE
+/.idea
+/.awcache
+/.vscode
+
+# misc
+npm-debug.log
+
+# example
+/quick-start
+
+# tests
+/test
+/coverage
+/.nyc_output
+
+# dist
+/dist
+
+.history

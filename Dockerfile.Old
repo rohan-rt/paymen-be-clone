@@ -1,0 +1,15 @@
+FROM node:14-alpine3.13
+RUN rm -rf dist
+# Create app directory
+WORKDIR /app
+ADD . /app/
+
+RUN rm -rf .env
+RUN rm -rf yarn.lock
+RUN yarn install
+
+ENV HOST 0.0.0.0
+EXPOSE 5055
+
+# start command
+CMD [ "yarn", "start:prod" ]

@@ -1,0 +1,489 @@
+[
+    {
+        "_id": "1",
+        "name": "EU standard",
+        "type": "default",
+        "_comments": "Available rules required, onlyLetters, onlyNum, onlyAlphanum, onlyAlphanumPlusSpecialChars, minLengthAllowed, maxLengthAllowed|| minLength can be null/0 or a minimum value for the field|| maxLength can be null/0 or a maximum value for the field|| selectionItems required only if formType is selection.",
+        "structure": [
+            {
+                "_id": "cl1",
+                "id": "clientFullName_C",
+                "type": "Client",
+                "item": "Full name",
+                "sysMandatory": false,
+                "formType": "text",
+                "rules": [],
+                "minLength": 0,
+                "maxLength": 0
+            },
+            {
+                "_id": "cl2",
+                "id": "clientAddress_C",
+                "type": "Client",
+                "item": "Address",
+                "sysMandatory": false,
+                "formType": "text",
+                "rules": []
+            },
+            {
+                "_id": "cl3",
+                "id": "clientTaxId_C",
+                "type": "Client",
+                "item": "Tax ID",
+                "sysMandatory": false,
+                "formType": "text",
+                "rules": ["onlyAlphanum"]
+            },
+            {
+                "_id": "su1",
+                "id": "supplierFullName_C",
+                "type": "Supplier",
+                "item": "Full name",
+                "sysMandatory": false,
+                "formType": "text",
+                "rules": []
+            },
+            {
+                "_id": "su2",
+                "id": "supplierAddress_C",
+                "type": "Supplier",
+                "item": "Address",
+                "sysMandatory": false,
+                "formType": "text",
+                "rules": []
+            },
+            {
+                "_id": "su3",
+                "id": "supplierTaxId_C",
+                "type": "Supplier",
+                "item": "Tax ID",
+                "sysMandatory": false,
+                "formType": "text",
+                "rules": ["onlyAlphanum"]
+            },
+            {
+                "_id": "su4",
+                "id": "supplierIban_C",
+                "type": "Supplier",
+                "item": "IBAN",
+                "sysMandatory": false,
+                "formType": "text",
+                "rules": ["onlyAlphanum"]
+            },
+            {
+                "_id": "su5",
+                "id": "supplierBic_C",
+                "type": "Supplier",
+                "item": "BIC",
+                "sysMandatory": false,
+                "formType": "text",
+                "rules": ["onlyAlphanum"]
+            },
+            {
+                "_id": "in1",
+                "id": "invoiceNumber_C",
+                "type": "Invoice",
+                "item": "Invoice number",
+                "sysMandatory": true,
+                "formType": "text",
+                "rules": []
+            },
+            {
+                "_id": "in2",
+                "id": "issueDate_D",
+                "type": "Invoice",
+                "item": "Date",
+                "sysMandatory": true,
+                "formType": "date"
+            },
+            {
+                "_id": "in3",
+                "id": "dueDate_D",
+                "type": "Invoice",
+                "item": "Due date",
+                "sysMandatory": true,
+                "formType": "date"
+            },
+            {
+                "_id": "in4",
+                "id": "totalAmountWithoutVat_N",
+                "type": "Invoice",
+                "item": "Total amount excl. VAT",
+                "sysMandatory": false,
+                "formType": "amount",
+                "rules": []
+            },
+            {
+                "_id": "in5",
+                "id": "totalVatAmount_N",
+                "type": "Invoice",
+                "item": "Total VAT",
+                "sysMandatory": false,
+                "formType": "amount",
+                "rules": []
+            },
+            {
+                "_id": "in6",
+                "id": "totalAmountWithVat_N",
+                "type": "Invoice",
+                "item": "Total amount incl. VAT",
+                "sysMandatory": true,
+                "formType": "amount",
+                "rules": []
+            },
+            {
+                "_id": "in7",
+                "id": "currency_C",
+                "type": "Invoice",
+                "item": "Currency",
+                "sysMandatory": true,
+                "formType": "selection",
+                "selectionItems": ["EUR", "USD", "GBP"]
+            },
+            {
+                "_id": "in8",
+                "id": "reference_C",
+                "type": "Invoice",
+                "item": "Reference",
+                "sysMandatory": false,
+                "formType": "text",
+                "rules": []
+            }
+        ]
+    },
+    {
+        "_id": "2",
+        "name": "EU purchase order",
+        "type": "default",
+        "_comments": "Available rules required, onlyLetters, onlyNum, onlyAlphanum, onlyAlphanumPlusSpecialChars, minLengthAllowed, maxLengthAllowed|| minLength can be null/0 or a minimum value for the field|| maxLength can be null/0 or a maximum value for the field|| selectionItems required only if formType is selection.",
+        "structure": [
+            {
+                "_id": "cl1",
+                "id": "clientFullName_C",
+                "type": "Client",
+                "item": "Full name",
+                "sysMandatory": false,
+                "formType": "text",
+                "rules": []
+            },
+            {
+                "_id": "cl2",
+                "id": "clientAddress_C",
+                "type": "Client",
+                "item": "Address",
+                "sysMandatory": false,
+                "formType": "text",
+                "rules": []
+            },
+            {
+                "_id": "cl3",
+                "id": "clientTaxId_C",
+                "type": "Client",
+                "item": "Tax ID",
+                "sysMandatory": false,
+                "formType": "text",
+                "rules": ["onlyAlphanum"]
+            },
+            {
+                "_id": "su1",
+                "id": "supplierFullName_C",
+                "type": "Supplier",
+                "item": "Full name",
+                "sysMandatory": false,
+                "formType": "text",
+                "rules": []
+            },
+            {
+                "_id": "su2",
+                "id": "supplierAddress_C",
+                "type": "Supplier",
+                "item": "Address",
+                "sysMandatory": false,
+                "formType": "text",
+                "rules": []
+            },
+            {
+                "_id": "su3",
+                "id": "supplierTaxId_C",
+                "type": "Supplier",
+                "item": "Tax ID",
+                "sysMandatory": false,
+                "formType": "text",
+                "rules": ["onlyAlphanum"]
+            },
+            {
+                "_id": "su4",
+                "id": "supplierIban_C",
+                "type": "Supplier",
+                "item": "IBAN",
+                "sysMandatory": false,
+                "formType": "text",
+                "rules": ["onlyAlphanum"]
+            },
+            {
+                "_id": "su5",
+                "id": "supplierBic_C",
+                "type": "Supplier",
+                "item": "BIC",
+                "sysMandatory": false,
+                "formType": "text",
+                "rules": ["onlyAlphanum"]
+            },
+            {
+                "_id": "in1",
+                "id": "invoiceNumber_C",
+                "type": "Invoice",
+                "item": "Invoice number",
+                "sysMandatory": true,
+                "formType": "text",
+                "rules": []
+            },
+            {
+                "_id": "in2",
+                "id": "issueDate_D",
+                "type": "Invoice",
+                "item": "Date",
+                "sysMandatory": true,
+                "formType": "date"
+            },
+            {
+                "_id": "in3",
+                "id": "dueDate_D",
+                "type": "Invoice",
+                "item": "Due date",
+                "sysMandatory": true,
+                "formType": "date"
+            },
+            {
+                "_id": "in4",
+                "id": "deliveryDate_D",
+                "type": "Invoice",
+                "item": "Delivery date",
+                "sysMandatory": false,
+                "formType": "date"
+            },
+            {
+                "_id": "in5",
+                "id": "poNumber_C",
+                "type": "Invoice",
+                "item": "PO number",
+                "sysMandatory": true,
+                "formType": "text",
+                "rules": []
+            },
+            {
+                "_id": "in6",
+                "id": "totalAmountWithoutVat_N",
+                "type": "Invoice",
+                "item": "Total amount excl. VAT",
+                "sysMandatory": false,
+                "formType": "amount",
+                "rules": []
+            },
+            {
+                "_id": "in7",
+                "id": "totalVatAmount_N",
+                "type": "Invoice",
+                "item": "Total VAT amount",
+                "sysMandatory": false,
+                "formType": "amount",
+                "rules": []
+            },
+            {
+                "_id": "in8",
+                "id": "totalAmountWithVat_N",
+                "type": "Invoice",
+                "item": "Total amount incl. VAT",
+                "sysMandatory": true,
+                "formType": "amount",
+                "rules": []
+            },
+            {
+                "_id": "in9",
+                "id": "currency_C",
+                "type": "Invoice",
+                "item": "Currency",
+                "sysMandatory": true,
+                "formType": "selection",
+                "selectionItems": ["EUR", "USD", "GBP"]
+            },
+            {
+                "_id": "in10",
+                "id": "reference_C",
+                "type": "Invoice",
+                "item": "Reference",
+                "sysMandatory": false,
+                "formType": "text",
+                "rules": []
+            }
+        ]
+    },
+    {
+        "_id": "3",
+        "name": "EU credit note",
+        "type": "default",
+        "_comments": "Available rules required, onlyLetters, onlyNum, onlyAlphanum, onlyAlphanumPlusSpecialChars, minLengthAllowed, maxLengthAllowed|| minLength can be null/0 or a minimum value for the field|| maxLength can be null/0 or a maximum value for the field|| selectionItems required only if formType is selection.",
+        "structure": [
+            {
+                "_id": "cl1",
+                "id": "clientFullName_C",
+                "type": "Client",
+                "item": "Full name",
+                "sysMandatory": false,
+                "formType": "text",
+                "rules": []
+            },
+            {
+                "_id": "cl2",
+                "id": "clientAddress_C",
+                "type": "Client",
+                "item": "Address",
+                "sysMandatory": false,
+                "formType": "text",
+                "rules": []
+            },
+            {
+                "_id": "cl3",
+                "id": "clientTaxId_C",
+                "type": "Client",
+                "item": "Tax ID",
+                "sysMandatory": false,
+                "formType": "text",
+                "rules": ["onlyAlphanum"]
+            },
+            {
+                "_id": "su1",
+                "id": "supplierFullName_C",
+                "type": "Supplier",
+                "item": "Full name",
+                "sysMandatory": false,
+                "formType": "text",
+                "rules": []
+            },
+            {
+                "_id": "su2",
+                "id": "supplierAddress_C",
+                "type": "Supplier",
+                "item": "Address",
+                "sysMandatory": false,
+                "formType": "text",
+                "rules": []
+            },
+            {
+                "_id": "su3",
+                "id": "supplierTaxId_C",
+                "type": "Supplier",
+                "item": "Tax ID",
+                "sysMandatory": false,
+                "formType": "text",
+                "rules": ["onlyAlphanum"]
+            },
+            {
+                "_id": "su4",
+                "id": "supplierIban_C",
+                "type": "Supplier",
+                "item": "IBAN",
+                "sysMandatory": false,
+                "formType": "text",
+                "rules": ["onlyAlphanum"]
+            },
+            {
+                "_id": "su5",
+                "id": "supplierBic_C",
+                "type": "Supplier",
+                "item": "BIC",
+                "sysMandatory": false,
+                "formType": "text",
+                "rules": ["onlyAlphanum"]
+            },
+            {
+                "_id": "in1",
+                "id": "invoiceNumber_C",
+                "type": "Invoice",
+                "item": "Invoice number",
+                "sysMandatory": true,
+                "formType": "text",
+                "rules": []
+            },
+            {
+                "_id": "in2",
+                "id": "issueDate_D",
+                "type": "Invoice",
+                "item": "Date",
+                "sysMandatory": true,
+                "formType": "date"
+            },
+            {
+                "_id": "in3",
+                "id": "dueDate_D",
+                "type": "Invoice",
+                "item": "Due date",
+                "sysMandatory": true,
+                "formType": "date"
+            },
+            {
+                "_id": "in4",
+                "id": "refInvoice_C",
+                "type": "Invoice",
+                "item": "Referenced invoice",
+                "sysMandatory": false,
+                "formType": "text",
+                "rules": []
+            },
+            {
+                "_id": "in5",
+                "id": "creditNoteId_C",
+                "type": "Invoice",
+                "item": "Credit note ID",
+                "sysMandatory": false,
+                "formType": "text",
+                "rules": []
+            },
+            {
+                "_id": "in6",
+                "id": "totalAmountWithoutVat_N",
+                "type": "Invoice",
+                "item": "Total amount excl. VAT",
+                "sysMandatory": false,
+                "formType": "amount",
+                "rules": []
+            },
+            {
+                "_id": "in7",
+                "id": "totalVatAmount_N",
+                "type": "Invoice",
+                "item": "Total VAT",
+                "sysMandatory": false,
+                "formType": "amount",
+                "rules": []
+            },
+            {
+                "_id": "in8",
+                "id": "totalAmountWithVat_N",
+                "type": "Invoice",
+                "item": "Total amount incl. VAT",
+                "sysMandatory": true,
+                "formType": "amount",
+                "rules": []
+            },
+            {
+                "_id": "in9",
+                "id": "currency_C",
+                "type": "Invoice",
+                "item": "Currency",
+                "sysMandatory": true,
+                "formType": "selection",
+                "selectionItems": ["EUR", "USD", "GBP"]
+            },
+            {
+                "_id": "in10",
+                "id": "reference_C",
+                "type": "Invoice",
+                "item": "Reference",
+                "sysMandatory": false,
+                "formType": "text",
+                "rules": []
+            }
+        ]
+    }
+]
